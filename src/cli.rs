@@ -53,7 +53,7 @@ pub enum Command {
     /// Serve the site. Rebuild and reload on change automatically
     Serve {
         /// Interface to bind on
-        #[clap(short = 'i', long, default_value = "127.0.0.1")]
+        #[clap(short = 'i', long, default_value = "localhost")]
         interface: String,
 
         /// Which port to use
@@ -66,7 +66,7 @@ pub enum Command {
         output_dir: Option<PathBuf>,
 
         /// Changes the base_url
-        #[clap(short = 'u', long, default_value = "127.0.0.1")]
+        #[clap(short = 'u', long, default_value = "localhost")]
         base_url: String,
 
         /// Include drafts when loading the site
